@@ -18,7 +18,7 @@ package com.sri.dsa.array.basic;
  * @author Srikanth Pula
  *         Date: 01-05-2024
  */
-public class FindMaximumInArray {
+public class FindMaxMinInArray {
     /**
      * Main method which acts as the entry point of the program.
      *
