@@ -1,5 +1,7 @@
 package com.sri.dsa.array.basic;
 
+import java.util.Arrays;
+
 /**
  * This class provides methods to rotate the elements of an array to the right
  * or left
@@ -28,8 +30,8 @@ public class RotateArray {
      * @param args Command line arguments, not used in this program.
      */
     public static void main(String[] args) {
-        int[] array = { 1, 2, 3, 4, 5 }; // Example array
-        int k = 1; // Number of positions to rotate by
+        int[] array = { 1, 2, 3, 4, 5,6,7,8,9,10 }; // Example array
+        int k = 3; // Number of positions to rotate by
         // Rotate array to the right
         rotateRight(array, k);
         System.out.print("Array rotated to the right by " + k + " positions: ");
@@ -39,7 +41,7 @@ public class RotateArray {
         System.out.println();
 
         // Reset array for demonstration
-        int[] originalArray = { 1, 2, 3, 4, 5 };
+        int[] originalArray = { 1, 2, 3, 4, 5,6,7,8,9,10 };
         // Rotate array to the left
         rotateLeft(originalArray, k);
         System.out.print("Array rotated to the left by " + k + " positions: ");
@@ -93,11 +95,13 @@ public class RotateArray {
      */
     private static void reverse(int[] array, int start, int end) {
         while (start < end) {
+
             int temp = array[start];
             array[start] = array[end];
             array[end] = temp;
             start++;
             end--;
+            System.out.println(Arrays.toString(array)+" "+start+" "+end);
         }
     }
 }
