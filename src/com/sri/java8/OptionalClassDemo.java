@@ -12,6 +12,7 @@ import java.util.Optional;
 /**
  * Demonstrates the usage of the Optional class in Java.
  */
+@SuppressWarnings("unused")
 public class OptionalClassDemo {
 
     public static void main(String[] args) {

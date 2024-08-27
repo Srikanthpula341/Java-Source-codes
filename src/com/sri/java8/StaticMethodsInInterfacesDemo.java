@@ -1,19 +1,20 @@
 package com.sri.java8;
 
-/**
+/*
  * Copyright (c) 2024 Srikanth Pula. All rights reserved.
  *
  * @author Srikanth Pula
  * Date: 26-08-2024
  */
 
-/**
+/*
  * Demonstrates the usage of static methods in interfaces in Java.
  *
  * Static methods in interfaces are utility methods that belong to the interface itself,
  * not to the instances of the implementing classes. They can be called without creating an
  * instance of the interface.
  */
+@SuppressWarnings("unused")
 public class StaticMethodsInInterfacesDemo {
 
     public static void main(String[] args) {

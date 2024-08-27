@@ -13,9 +13,11 @@ import java.util.stream.*;
 /**
  * Demonstrates various Stream API operations with numbers.
  */
+@SuppressWarnings("unused")
 public class NumberStreams {
 
-    public static void main(String[] args) {
+    
+public static void main(String[] args) {
         // 1. Stream Creation from List
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         Stream<Integer> streamFromList = numbers.stream();

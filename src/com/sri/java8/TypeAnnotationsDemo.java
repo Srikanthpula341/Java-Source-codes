@@ -1,6 +1,6 @@
 package com.sri.java8;
 
-/**
+/*
  * Copyright (c) 2024 Srikanth Pula. All rights reserved.
  *
  * @author Srikanth Pula
@@ -18,8 +18,10 @@ import java.util.List;
  * This includes not only class declarations, but also generic types, casts, and other type uses.
  * Type Annotations can be used for enhanced type checking and error detection.
  */
+@SuppressWarnings("unused")
 public class TypeAnnotationsDemo {
 
+    
     public static void main(String[] args) {
         // 1. Applying Type Annotations to Generic Types
         /**

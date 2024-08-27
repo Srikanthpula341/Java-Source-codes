@@ -13,6 +13,7 @@ import java.util.stream.*;
 /**
  * Demonstrates various Stream API operations with custom objects.
  */
+@SuppressWarnings("unused")
 public class ObjectStreams {
 
     static class Person {

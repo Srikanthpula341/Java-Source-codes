@@ -13,6 +13,7 @@ import java.util.stream.*;
 /**
  * Demonstrates various Stream API operations with strings.
  */
+@SuppressWarnings("unused")
 public class StringStreams {
 
     public static void main(String[] args) {
