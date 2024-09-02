@@ -12,7 +12,73 @@ import java.util.function.*;
 
 /**
  * Demonstrates various Functional Interfaces in Java.
+ *
+ * Functional interfaces are a key concept introduced in Java 8 as part of the
+ * lambda expression and functional programming features.
+ * A functional interface is an interface that contains exactly one abstract
+ * method, but it can have multiple default or static methods.
+ * 
+ * Functional interfaces serve as the foundation for lambda expressions and
+ * method references in Java. They enable developers to write more
+ * concise and readable code by allowing the implementation of single-method
+ * interfaces in a functional style.
+ * 
+ * Common functional interfaces in Java include:
+ * 
+ * 1. `java.util.function.Predicate<T>`:
+ * - Represents a function that takes a single input and returns a boolean
+ * value.
+ * - Example: `Predicate<String> isEmpty = String::isEmpty;`
+ *
+ * 2. `java.util.function.Function<T, R>`:
+ * - Represents a function that takes a single input of type T and returns a
+ * result of type R.
+ * - Example: `Function<String, Integer> stringLength = String::length;`
+ *
+ * 3. `java.util.function.Consumer<T>`:
+ * - Represents a function that takes a single input and returns no result
+ * (void).
+ * - Example: `Consumer<String> print = System.out::println;`
+ *
+ * 4. `java.util.function.Supplier<T>`:
+ * - Represents a function that takes no input and returns a result of type T.
+ * - Example: `Supplier<String> stringSupplier = () -> "Hello, World!";`
+ *
+ * 5. `java.util.function.BinaryOperator<T>`:
+ * - Represents a function that takes two inputs of the same type and returns a
+ * result of the same type.
+ * - Example: `BinaryOperator<Integer> sum = (a, b) -> a + b;`
+ *
+ * A functional interface can also be defined by the developer using the
+ * `@FunctionalInterface` annotation. This annotation is not mandatory
+ * but is used to explicitly declare an interface as a functional interface. It
+ * also ensures that the compiler will generate an error if the
+ * interface violates the rules of a functional interface (i.e., having more
+ * than one abstract method).
+ *
+ * Example of a custom functional interface:
+ *
+ * @FunctionalInterface
+ *                      public interface MyFunctionalInterface {
+ *                      void execute();
+ *
+ *                      default void printMessage() {
+ *                      System.out.println("Executing functional interface");
+ *                      }
+ *                      }
+ *
+ *                      In this example, `MyFunctionalInterface` is a functional
+ *                      interface with a single abstract method `execute()`. The
+ *                      interface also has a
+ *                      default method `printMessage()`, which is allowed in
+ *                      functional interfaces.
+ *
+ *                      Functional interfaces play a crucial role in enabling
+ *                      functional programming paradigms in Java, particularly
+ *                      with lambda expressions,
+ *                      making code more expressive and concise.
  */
+
 public class FunctionalInterfaces {
 
     public static void main(String[] args) {

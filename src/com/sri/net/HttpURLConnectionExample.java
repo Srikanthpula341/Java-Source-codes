@@ -97,6 +97,7 @@ public class HttpURLConnectionExample {
         postConn.setRequestMethod("POST");  // Set the HTTP method to POST
         postConn.setRequestProperty("Content-Type", "application/json; utf-8");  // Set the request content type to JSON
         postConn.setDoOutput(true);  // Allow sending data to the server
+        
 
         String jsonInputString = "{\"title\":\"foo\",\"body\":\"bar\",\"userId\":1}";
 
@@ -116,6 +117,7 @@ public class HttpURLConnectionExample {
             postResponse.append(postInputLine.trim());
         }
         postIn.close();  // Close the BufferedReader when done
+        postConn.disconnect();
 
         // Print the response string
         System.out.println("POST Response: " + postResponse.toString());
@@ -154,6 +156,7 @@ public class HttpURLConnectionExample {
             putResponse.append(putInputLine.trim());
         }
         putIn.close();  // Close the BufferedReader when done
+        putConn.disconnect();
 
         // Print the response string
         System.out.println("PUT Response: " + putResponse.toString());

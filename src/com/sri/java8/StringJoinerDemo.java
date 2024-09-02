@@ -28,7 +28,9 @@ public class StringJoinerDemo {
         // Creating a StringJoiner with a delimiter, prefix, and suffix
         StringJoiner joinerWithPrefixSuffix = new StringJoiner(", ", "[", "]");
         joinerWithPrefixSuffix.add("apple");
+        
         joinerWithPrefixSuffix.add("banana");
+                System.out.println("Joined String with Prefix and Suffix: " + joinerWithPrefixSuffix);
         joinerWithPrefixSuffix.add("orange");
         System.out.println("Joined String with Prefix and Suffix: " + joinerWithPrefixSuffix);
     }
