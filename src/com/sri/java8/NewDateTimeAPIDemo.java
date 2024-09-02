@@ -34,7 +34,7 @@ public class NewDateTimeAPIDemo {
         LocalDate today = LocalDate.now();
         System.out.println("Today's Date: " + today);
 
-        LocalDate specificDate = LocalDate.of(2020, Month.JANUARY, 1);
+        LocalDate specificDate = LocalDate.of(2020, Month.FEBRUARY, 1);
         System.out.println("Specific Date: " + specificDate);
 
         // 2. LocalTime Example

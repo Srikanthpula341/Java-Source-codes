@@ -11,9 +11,10 @@ import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
 
-/**
- * Demonstrates various Lambda Expressions in Java with detailed examples.
- */
+
+
+
+
 public class LambdaExpressions {
 
     public static void main(String[] args) {

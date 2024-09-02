@@ -21,25 +21,48 @@ public static void main(String[] args) {
         // 1. Stream Creation from List
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         Stream<Integer> streamFromList = numbers.stream();
+        System.out.print("streamFromList: ");
+        streamFromList.forEach(num -> System.out.print(num + " "));
+        System.out.println();
 
         // 2. Stream Creation from Array
         Integer[] numberArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         Stream<Integer> streamFromArray = Arrays.stream(numberArray);
+        System.out.print("streamFromArray: ");
+        streamFromArray.forEach(num -> System.out.print(num + " "));
+        System.out.println();
 
         // 3. Stream Creation using Stream.of
         Stream<Integer> streamOfNumbers = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        System.out.print("streamOfNumbers: ");
+        streamOfNumbers.forEach(num -> System.out.print(num + " "));
+        System.out.println();
+        
 
         // 4. Stream Creation using Stream.generate (infinite stream)
         Stream<Double> randomNumbers = Stream.generate(Math::random).limit(10);
+        System.out.print("randomNumbers: ");
+        randomNumbers.forEach(n -> System.out.print(n + " "));
+        System.out.println();
 
         // 5. Stream Creation using Stream.iterate
         Stream<Integer> iterateNumbers = Stream.iterate(0, n -> n + 2).limit(10);
+        System.out.print("iterateNumbers: ");
+        iterateNumbers.forEach(num -> System.out.print(num + " "));
+        System.out.println();
+        
 
         // 6. Stream Creation using IntStream.range
         IntStream rangeStream = IntStream.range(1, 11);
+        System.out.println("rangeStream: ");
+        rangeStream.forEach(System.out::print);
+        System.out.println();
 
         // 7. Stream Creation using IntStream.rangeClosed
         IntStream rangeClosedStream = IntStream.rangeClosed(1, 10);
+        System.out.println("rangeClosedStream: ");
+        rangeClosedStream.forEach(System.out::print);
+        System.out.println();
 
         // 8. Filter: Get even numbers
         List<Integer> evenNumbers = numbers.stream()
@@ -98,6 +121,7 @@ public static void main(String[] args) {
         // 16. TakeWhile: Take numbers less than 6
         List<Integer> takenNumbers = numbers.stream()
                 .takeWhile(n -> n < 6)
+                .peek(System.out::println)
                 .collect(Collectors.toList());
         System.out.println("Taken Numbers: " + takenNumbers);
 
